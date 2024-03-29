@@ -1,0 +1,20 @@
+package PageFactory;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class pf4 {
+
+	WebDriver driver;
+	public pf4(WebDriver driver) {
+		this.driver=driver;
+		PageFactory.initElements(driver,this);
+	}
+		
+	public void fun1() {
+		
+	}
+}
+
