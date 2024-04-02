@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="0.202" tests="5" skipped="0" failures="0" errors="0">
+<testcase classname="Login to Redbus App" name="Unsuccessful login with invalid phone number" time="0.006">
+<system-out><![CDATA[
+Given user on Home Page.....................................................passed
+And user goes to account select login.......................................passed
+When login page is opened user enters invalid phone number..................passed
+And click generate OTP button...............................................passed
+Then user should see an error message.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login to Redbus App" name="Unsuccessful login with valid phone number but incorrect OTP" time="0">
+<system-out><![CDATA[
+Given user on Home Page.....................................................passed
+And user goes to account select login.......................................passed
+When login page is opened user enters a valid phone number..................passed
+And click Send OTP button...................................................passed
+And user enters incorrect OTP...............................................passed
+And click verify button.....................................................passed
+Then user should see error message..........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login to Redbus App" name="Successful login with valid phone number" time="0">
+<system-out><![CDATA[
+Given user on Home Page.....................................................passed
+And user goes to account select login.......................................passed
+When login page is opened user enters a valid phone number..................passed
+And click Send OTP button...................................................passed
+Then user should receive OTP via SMS........................................passed
+And user enters OTP.........................................................passed
+And click verify OTP button.................................................passed
+Then user should successfully logged into app...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login to Redbus App" name="View user Ticket" time="0">
+<system-out><![CDATA[
+Given user on Home Page.....................................................passed
+And user goes to account select show my ticket..............................passed
+When user enters ticket number and mobile number............................passed
+Then trip details displays..................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login to Redbus App" name="User get Email or SMS" time="0.001">
+<system-out><![CDATA[
+Given user on Home Page.....................................................passed
+When user goes to account select Email or SMS...............................passed
+Then user enters details to get Email or SMS................................passed
+]]></system-out>
+</testcase>
+</testsuite>

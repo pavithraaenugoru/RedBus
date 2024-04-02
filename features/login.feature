@@ -26,18 +26,14 @@ Scenario: Successful login with valid phone number
 		And click verify OTP button
 		Then user should successfully logged into app
 
-
-Scenario: Opening My Profile Page
+Scenario: View user Ticket
     Given user on Home Page
-		And user goes to account select login
-		When login page is opened user enters a valid phone number as "8341402168"
-		And click Send OTP button
-		Then user should receive OTP via SMS
-		And user enters OTP
-		And click verify OTP button
-		Then user should successfully logged into app
-		And user go to My account
-		When user select My Profile 
-		Then user details will displayed
-		
+		And user goes to account select show my ticket
+		When user enters ticket number and mobile number
+		Then trip details displays
+	
+Scenario: User get Email or SMS
+    Given user on Home Page
+		When user goes to account select Email or SMS		
+		Then user enters details to get Email or SMS
 

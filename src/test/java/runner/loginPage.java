@@ -1,16 +1,18 @@
 package runner;
 
-import org.junit.runner.RunWith;
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
 
-import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
-
-@RunWith(Cucumber.class)
 @CucumberOptions(
 		features="features",
-		glue="stepDefinations")
+		glue="stepDefinations",		
+		//plugin="com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+		//plugin={"pretty","json:target/cucumberReports.json"},		 
+		//plugin={"pretty","junit:target/cucumberReports.xml"}
+		dryRun=true
+		)
 
-public class loginPage {
-
-	
+public class loginPage extends AbstractTestNGCucumberTests{
+  
+  
 }
